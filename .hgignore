@@ -1,0 +1,20 @@
+syntax: glob
+
+target/*
+*/target/*
+*/overlays/*
+.idea/*
+.classpath
+.project
+.settings
+*.class
+*.jar
+.idea
+*.iml
+bin
+*.ipr
+*.iws
+MANIFEST.MF
+.metadata
+*.orig
+.hg/

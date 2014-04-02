@@ -1,0 +1,40 @@
+<beans:beans
+        xmlns="http://www.springframework.org/schema/security"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                 http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                 http://www.springframework.org/schema/security 
+                 http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <!--<http pattern="/resources" security="none" />-->
+
+    <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/" access="permitAll"/>
+        <intercept-url pattern="/registration" access="hasRole('ROLE_ANONYMOUS')"/>
+        <intercept-url pattern="/login" access="hasRole('ROLE_ANONYMOUS')"/>
+        <intercept-url pattern="/loginfailed" access="hasRole('ROLE_ANONYMOUS')"/>
+        <intercept-url pattern="/main/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
+        <form-login login-page="/login"
+                    authentication-failure-url="/loginfailed"
+                    default-target-url="/main"/>
+        <logout logout-success-url="/" logout-url="/logout"/>
+       <!-- <remember-me token-validity-seconds="604800"/>-->
+    </http>
+
+    <!--<authentication-manager alias="authenticationManager">
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query="SELECT email, password, true FROM users WHERE email = ?"
+                               authorities-by-username-query="SELECT email, role FROM users WHERE email = ?" />
+
+            <password-encoder hash="md5"/>
+        </authentication-provider>
+    </authentication-manager>-->
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="userDetailsServiceImpl" >
+            <password-encoder hash="md5"/>
+        </authentication-provider>
+    </authentication-manager>
+</beans:beans>

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <table name="userroles">
+        <column>ID</column>
+        <column>USERID</column>
+        <column>ROLEID</column>
+    </table>
+    <table name="roles">
+        <column>ID</column>
+        <column>ROLE</column>
+        <row>
+            <value>1</value>
+            <value>ROLE_ADMIN</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>ROLE_USER</value>
+        </row>
+    </table>
+    <table name="users">
+        <column>ID</column>
+        <column>EMAIL</column>
+        <column>PASSWORD</column>
+        <column>REGISTRATIONDATE</column>
+        <row>
+            <value>1</value>
+            <value>test1@test.com</value>
+            <value>password</value>
+            <value><![CDATA[2014-03-01 23:10:10.0]]></value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>test2@test.com</value>
+            <value>password</value>
+            <value><![CDATA[2014-03-01 23:10:10.0]]></value>
+        </row>
+    </table>
+    <table name="events">
+        <column>ID</column>
+        <column>SUBJECT</column>
+        <column>DESCRIPTION</column>
+        <column>ISDONE</column>
+        <column>OWNERID</column>
+        <column>TYPE</column>
+        <column>DATESTART</column>
+        <column>DATEEND</column>
+        <column>DEADLINE</column>
+        <row>
+            <value>1</value>
+            <value>example</value>
+            <value>example</value>
+            <value>true</value>
+            <value>1</value>
+            <value>TASK</value>
+            <value><![CDATA[2014-03-01 23:10:10.0]]></value>
+            <value><![CDATA[2014-03-01 23:10:10.0]]></value>
+            <value><![CDATA[2014-03-01 23:10:10.0]]></value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>example2</value>
+            <value>example2</value>
+            <value>true</value>
+            <value>2</value>
+            <value>TASK</value>
+            <value><![CDATA[2014-03-01 11:00:00.0]]></value>
+            <value><![CDATA[2014-03-01 23:00:00.0]]></value>
+            <value><![CDATA[2014-03-01 23:00:00.0]]></value>
+        </row>
+        <row>
+            <value>4</value>
+            <value>betweenDates</value>
+            <value>betweenDatesTest</value>
+            <value>true</value>
+            <value>2</value>
+            <value>TASK</value>
+            <value><![CDATA[2014-03-02 12:30:00.0]]></value>
+            <value><![CDATA[2014-03-04 23:30:00.0]]></value>
+            <value><![CDATA[2014-03-04 23:30:00.0]]></value>
+        </row>
+        <row>
+            <value>5</value>
+            <value>dateAndTime</value>
+            <value>dateAndTimeTest</value>
+            <value>true</value>
+            <value>2</value>
+            <value>TASK</value>
+            <value><![CDATA[2014-03-05 14:00:00.0]]></value>
+            <value><![CDATA[2014-03-05 17:10:00.0]]></value>
+            <value><![CDATA[2014-03-05 23:10:00.0]]></value>
+        </row>
+    </table>
+</dataset>

@@ -1,0 +1,37 @@
+#tableOfEventsByWeek {
+    /*отмена выдиления*/
+    /* Для Mozilla FireFox */
+    -moz-user-select: none;
+    /* Для Safari, Chrome */
+    -khtml-user-select: none;
+    /* Общее свойство */
+    -webkit-user-select: none;
+}
+
+#eventsNavBar {
+    /* Для Mozilla FireFox */
+    -moz-user-select: none;
+    /* Для Safari, Chrome */
+    -khtml-user-select: none;
+    /* Общее свойство */
+    -webkit-user-select: none;
+}
+.shortField {
+    width: 5%;
+}
+
+td {
+
+}
+
+tr {
+
+}
+
+.container {
+    width: 70%;
+}
+
+.eventByDay {
+    display: none;
+}
