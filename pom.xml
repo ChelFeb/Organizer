@@ -229,12 +229,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                   <server>TomcatServer</server>
-                    <path>/organizer</path>
-                    <path>/organizer</path>
-                    <username>tomcat</username>
-                    <password>tomcatpass</password>
-                    <url>http://localhost:8080/manager/text</url>
+                    <path>/</path>
                 </configuration>
             </plugin>
         </plugins>

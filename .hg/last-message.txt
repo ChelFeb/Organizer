@@ -1,1 +1,0 @@
-fix error in console, I don't understand why need to use 'e.target'
